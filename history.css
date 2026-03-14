@@ -1,0 +1,219 @@
+:root {
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #5f6368;
+    --accent-color: #3367d6;
+    /* Google Blue */
+    --accent-hover: #2850a7;
+    --danger-color: #d93025;
+    --border-color: #e0e0e0;
+    --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    --radius: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.header-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.search-bar {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 14px;
+    width: 250px;
+}
+
+.btn-danger {
+    background-color: transparent;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-secondary);
+    color: white;
+}
+
+.session-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.session-header {
+    padding: 16px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.session-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.session-meta {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.session-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-restore {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-restore:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-delete-session {
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.btn-delete-session:hover {
+    color: var(--danger-color);
+}
+
+.tabs-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    /* Collapsed by default if we want, but let's show all for now or make it toggleable */
+    max-height: none;
+}
+
+.tab-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.1s;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.tab-item:last-child {
+    border-bottom: none;
+}
+
+.tab-item:hover {
+    background-color: #f8f9fa;
+}
+
+.tab-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    background-color: #eee;
+    /* Fallback */
+    border-radius: 2px;
+}
+
+.tab-title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.tab-url {
+    font-size: 12px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+.empty-state {
+    text-align: center;
+    margin-top: 60px;
+    color: var(--text-secondary);
+}

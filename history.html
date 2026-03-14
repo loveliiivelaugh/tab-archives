@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Archiver History</title>
+    <link rel="stylesheet" href="history.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Archived Sessions</h1>
+            <div class="header-controls">
+                <input type="text" id="searchInput" placeholder="Search tabs..." class="search-bar">
+                <button id="clearHistory" class="btn-danger">Clear All History</button>
+                <button id="exportHistory" class="btn-secondary">Export JSON</button>
+            </div>
+        </header>
+
+        <main id="sessionsList" class="sessions-list">
+            <!-- Sessions will be injected here via JS -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <h2>No archived sessions found.</h2>
+                <p>Open some tabs and click "Archive" in the extension popup!</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+
+</html>
